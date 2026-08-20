@@ -1,27 +1,36 @@
 html {
   background-color: aliceblue;
+  font-family: "Elms Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 header {
-  text-align: right;
+  text-align: left;
 }
 
-#Description {
-  width: 60%;
+#General {
+  border-bottom: 0;
+  margin-bottom: 0;
 }
 
-[name="ContactInfo"] {
-  padding-left: 0;
-  list-style: none;
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 1rem 0;
+}
+
+#About {
+  width: 50%;
+}
+
+#NavList,
+#ContactInfo {
   display: flex;
   gap: 20px;
-}
-
-[name="NavList"] {
-  justify-content: left;
   padding-left: 0;
   list-style: none;
-  display: flex;
-  gap: 20px;
 }
 
 a {
