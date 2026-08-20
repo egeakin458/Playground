@@ -1,4 +1,29 @@
-ul {
+html {
+  background-color: aliceblue;
+}
+header {
+  text-align: right;
+}
+
+#Description {
+  width: 60%;
+}
+
+[name="ContactInfo"] {
   padding-left: 0;
   list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+[name="NavList"] {
+  justify-content: left;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+a {
+  color: blueviolet;
 }
