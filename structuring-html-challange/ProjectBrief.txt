@@ -1,0 +1,32 @@
+Project brief
+
+For this project, your task is to take the content for the homepage of a bird watching website and add structural elements to it so it can have a page layout applied to it. You also need to make a few additions to the content.
+Content additions
+
+    Inside the <h1> element, add an <img> element that includes the dove logo on the page. Give it blank alternative text ("").
+    The "Home", "Get started", "Photos", "Gear", and "Forum" text items should be turned into a navigation menu.
+        Mark them up as an unordered list.
+        Inside each list item, wrap the text inside an <a> element that points to a URL of # (which creates a dummy link).
+    Remove the <!-- Link images here. --> comment. Replace it with a set of four thumbnail images of the "favorite birds". Each one should include some appropriate alternative text to describe the image, and be wrapped in an <a> element that links to the full-sized equivalent.
+
+Structural requirements
+
+The site structure needs to consist of the following:
+
+    A header that wraps the top-level page heading and the navigation menu list.
+    An additional wrapper around the navigation menu list.
+    A main content area containing two columns — a main article to contain the welcome text, and a sidebar (aside) to contain the image thumbnails.
+    A footer containing the copyright information and credits.
+
+In other words, you need to add a suitable wrapper for:
+
+    The header
+    The navigation menu
+    The main content
+    The welcome article
+    The image aside
+    The footer
+
+Styling the page
+
+If required, apply the provided CSS to the page by adding another <link> element just below the existing one provided in the starting HTML (some online code editors will apply the CSS automatically).
