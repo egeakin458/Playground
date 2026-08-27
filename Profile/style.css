@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   background-color: aliceblue;
   font-family: "Elms Sans", sans-serif;
@@ -5,8 +11,26 @@ html {
   font-weight: 400;
   font-style: normal;
 }
+
+body {
+  margin: 0;
+  color: #172033;
+}
+
 header {
-  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 2rem;
+  padding-block: 2rem;
+}
+
+header,
+nav,
+main,
+footer {
+  width: min(100% - 2rem, 70rem);
+  margin-inline: auto;
 }
 
 #General {
@@ -14,25 +38,55 @@ header {
   margin-bottom: 0;
 }
 
+#MainImg {
+  width: clamp(7rem, 18vw, 11rem);
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center 25%;
+  justify-self: end;
+  border-radius: 50%;
+}
+
 nav {
   position: sticky;
   top: 0;
   z-index: 10;
-  padding: 1rem 0;
+  padding-block: 1rem;
+  background-color: aliceblue;
+  border-block: 1px solid #c7d2e2;
 }
 
-#About {
-  width: 50%;
+main {
+  padding-block: 3rem;
+}
+
+main section {
+  max-width: 42rem;
+  padding-block: 1rem 3rem;
 }
 
 #NavList,
 #ContactInfo {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   padding-left: 0;
+  margin-block: 0;
   list-style: none;
+}
+
+footer {
+  padding-block: 2rem;
+  border-top: 1px solid #c7d2e2;
 }
 
 a {
   color: blueviolet;
+}
+
+@media (max-width: 40rem) {
+  header {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1rem;
+  }
 }
