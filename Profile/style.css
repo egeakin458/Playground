@@ -12,34 +12,64 @@ html {
   font-style: normal;
 }
 
+:root {
+  --page-width: 70rem;
+  --page-padding: 1rem;
+  --text-color: #172033;
+  --border-color: #c7d2e2;
+  --link-color: blueviolet;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 3rem;
+}
+
 body {
   margin: 0;
-  color: #172033;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  margin-block: 0 var(--space-sm);
+  line-height: 1.2;
+}
+
+p,
+ul,
+ol {
+  margin-block: 0 var(--space-sm);
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 header {
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: start;
-  gap: 2rem;
-  padding-block: 2rem;
+  gap: var(--space-md);
+  padding-block: var(--space-md);
 }
 
 header,
 nav,
 main,
 footer {
-  width: min(100% - 2rem, 70rem);
+  width: min(var(--page-width), calc(100% - (var(--page-padding) * 2)));
   margin-inline: auto;
 }
 
-#General {
-  border-bottom: 0;
+.site-title {
   margin-bottom: 0;
 }
 
-#MainImg {
-  width: clamp(7rem, 18vw, 11rem);
+.profile-image {
+  width: clamp(9rem, 22vw, 14rem);
   aspect-ratio: 1;
   object-fit: cover;
   object-position: center 25%;
@@ -53,40 +83,62 @@ nav {
   z-index: 10;
   padding-block: 1rem;
   background-color: aliceblue;
-  border-block: 1px solid #c7d2e2;
+  border-block: 1px solid var(--border-color);
 }
 
 main {
-  padding-block: 3rem;
+  padding-block: var(--space-lg);
 }
 
 main section {
   max-width: 42rem;
-  padding-block: 1rem 3rem;
+  padding-block: var(--space-sm) var(--space-lg);
+  scroll-margin-top: 5rem;
 }
 
-#NavList,
-#ContactInfo {
+.site-nav-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: var(--space-sm);
   padding-left: 0;
   margin-block: 0;
   list-style: none;
 }
 
+.contact-list {
+  display: grid;
+  gap: var(--space-xs);
+  padding-left: 0;
+  margin-block: 0 1rem;
+  list-style: none;
+}
+
 footer {
-  padding-block: 2rem;
-  border-top: 1px solid #c7d2e2;
+  padding-block: var(--space-md);
+  border-top: 1px solid var(--border-color);
+  scroll-margin-top: 5rem;
 }
 
 a {
-  color: blueviolet;
+  color: var(--link-color);
+}
+
+a:hover {
+  color: #4c1d95;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--text-color);
+  outline-offset: 3px;
 }
 
 @media (max-width: 40rem) {
   header {
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: 1rem;
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+
+  .profile-image {
+    justify-self: start;
   }
 }
