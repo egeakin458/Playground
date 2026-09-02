@@ -81,8 +81,8 @@ header {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  gap: var(--space-lg);
-  padding-block: 3rem 2rem;
+  gap: 2rem;
+  padding-block: 2.25rem 1.5rem;
 }
 
 header > div {
@@ -93,18 +93,18 @@ nav {
   position: sticky;
   top: 0;
   z-index: 10;
-  padding-block: 0.85rem;
+  padding-block: 0.7rem;
   background: rgba(244, 247, 251, 0.96);
   border-block: 1px solid var(--border-color);
 }
 
 main {
-  padding-block: 1.5rem 3rem;
+  padding-block: 1rem 2.25rem;
 }
 
 section {
   max-width: 42rem;
-  padding-block: 1rem 2.5rem;
+  padding-block: 0.75rem 2rem;
   scroll-margin-top: 5rem;
 }
 
@@ -113,7 +113,7 @@ section + section {
 }
 
 footer {
-  padding-block: 2rem 3rem;
+  padding-block: 1.5rem 2.5rem;
   border-top: 1px solid var(--border-color);
   scroll-margin-top: 5rem;
 }
@@ -141,7 +141,7 @@ address {
 }
 
 .profile-image {
-  width: clamp(9rem, 22vw, 13.5rem);
+  width: clamp(10rem, 23vw, 14.5rem);
   aspect-ratio: 1;
   object-fit: cover;
   object-position: center 25%;
