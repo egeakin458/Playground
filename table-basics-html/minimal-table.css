@@ -28,9 +28,18 @@ tr:nth-child(even) td {
 }
 
 tr:nth-child(odd) td {
-  background-color: rgb(220 220 220);
+  background-color: rgb(245 245 245);
 }
 
 caption {
   padding: 10px;
+}
+
+tbody {
+  font-size: 95%;
+  font-style: italic;
+}
+
+tfoot {
+  font-weight: bold;
 }

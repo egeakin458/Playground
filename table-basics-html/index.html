@@ -7,30 +7,57 @@
     <link href="minimal-table.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
+    <h1>Items sold summary</h1>
+
     <table>
-      <tr>
-        <th colspan="2">Animals</th>
-      </tr>
-      <tr>
-        <th colspan="2">Hippopotamus</th>
-      </tr>
-      <tr>
-        <th rowspan="2">Horse</th>
-        <td>Mare</td>
-      </tr>
-      <tr>
-        <td>Stallion</td>
-      </tr>
-      <tr>
-        <th colspan="2">Crocodile</th>
-      </tr>
-      <tr>
-        <th rowspan="2">Chicken</th>
-        <td>Hen</td>
-      </tr>
-      <tr>
-        <td>Rooster</td>
-      </tr>
+      <caption>
+        Items Sold August 2016
+      </caption>
+      <thead>
+        <tr>
+          <th>Purchase</th>
+          <th>Location</th>
+          <th>Date</th>
+          <th>Evaluation</th>
+          <th>Cost (€)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Haircut</td>
+          <td>Hairdresser</td>
+          <td>12/09</td>
+          <td>Great idea</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td>Lasagna</td>
+          <td>Restaurant</td>
+          <td>12/09</td>
+          <td>Regrets</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>Shoes</td>
+          <td>Shoe shop</td>
+          <td>13/09</td>
+          <td>Big regrets</td>
+          <td>65</td>
+        </tr>
+        <tr>
+          <td>Toothpaste</td>
+          <td>Supermarket</td>
+          <td>13/09</td>
+          <td>Good</td>
+          <td>5</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4">SUM</td>
+          <td>118</td>
+        </tr>
+      </tfoot>
     </table>
   </body>
 </html>
